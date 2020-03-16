@@ -17,10 +17,10 @@ public class ZakkieEndpoints {
 		ZakkieService s;
 		
 		@PostMapping("/addzakkie")
-		public Zakkie test(@RequestBody Zakkie zakkie) {
+		public String opslaan(@RequestBody Zakkie zakkie) {
 			System.out.println("hij doet het!!");
 			s.saveZakkie(zakkie);
-			return(zakkie);
+			return("Deze koffie is opgeslagen in de database!");
 		}
 		@GetMapping("/bekijkzakkie")
 		public Iterable<Zakkie> jojo() {
