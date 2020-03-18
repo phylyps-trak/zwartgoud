@@ -11,27 +11,27 @@ import com.michielsbeans.koffie.controller.ZakkieService;
 import com.michielsbeans.koffie.dto.Zakkie;
 
 @RestController
+//@RequestMapping("/zakkies")
 public class ZakkieEndpoints {
 		
 		@Autowired
 		ZakkieService s;
 		
-		@PostMapping("/addzakkie")
+		@PostMapping("/zakkies")
 		public String opslaan(@RequestBody Zakkie zakkie) {
 			System.out.println("hij doet het!!");
 			s.saveZakkie(zakkie);
 			return("Deze koffie is opgeslagen in de database!");
 		}
-		@GetMapping("/bekijkzakkie")
+		@GetMapping("/zakkies")
 		public Iterable<Zakkie> jojo() {
 			return s.getZakkies();
 		}
 		
-		@DeleteMapping("/deletezakkie/{id}")
+		@DeleteMapping("/zakkies/{id}")
 		public void delete(@PathVariable String id) {
 			Long zakkieId = Long.parseLong(id);
 			s.verwijderZakkie(zakkieId);
 			System.out.println(id + "verwijderd!");
 		}
-	
 }

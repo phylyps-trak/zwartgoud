@@ -17,8 +17,8 @@ public class Brander {
 	private String brander;
 	private String branderStad;
 	
-	@OneToMany(mappedBy = "brander")
-	private List<Zakkie> koffies;
+//	@OneToMany(mappedBy = "brander")
+//	private List<Zakkie> koffies;
 	
 	public String getBrander() {
 		return brander;

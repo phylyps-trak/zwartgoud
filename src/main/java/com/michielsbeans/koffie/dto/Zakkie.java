@@ -17,6 +17,20 @@ public class Zakkie {
 	private long id;
 	
 	private String brander;
+	//private String naam;
+	private String producent;
+	//private String regio;
+	private String land;
+	//private String type;
+	//private String varieteiten;
+	//private String hoogte;
+	private String proces;
+	//private int oogstjaar;
+	//private String notes;
+	private int score;
+	//private String review;
+	//private double prijs;
+	//private String via;
 	public long getId() {
 		return id;
 	}
@@ -53,25 +67,10 @@ public class Zakkie {
 	public void setScore(int score) {
 		this.score = score;
 	}
-	//private String naam;
-	private String producent;
-	//private String regio;
-	private String land;
-	//private String type;
-	//private String varieteiten;
-	//private String hoogte;
-	private String proces;
-	//private int oogstjaar;
-	//private String notes;
-	private int score;
-	//private String review;
-	//private double prijs;
-	//private String via;
-	
-	
 	
 //	@ManyToOne
 //	private Brander brander;
+
 	
 
 
