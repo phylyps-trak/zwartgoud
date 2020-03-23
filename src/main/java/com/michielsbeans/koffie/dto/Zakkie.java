@@ -29,7 +29,7 @@ public class Zakkie {
 	//private double prijs;
 	//private String via;
 	
-	private Brander brander;
+	//private Brander brander;
 	
 	public long getId() {
 		return id;
@@ -37,12 +37,12 @@ public class Zakkie {
 	public void setId(long id) {
 		this.id = id;
 	}
-	public Brander getBrander() {
-		return brander;
-	}
-	public void setBrander(Brander brander) {
-		this.brander = brander;
-	}
+//	public Brander getBrander() {
+//		return brander;
+//	}
+//	public void setBrander(Brander brander) {
+//		this.brander = brander;
+//	}
 	public String getProducent() {
 		return producent;
 	}

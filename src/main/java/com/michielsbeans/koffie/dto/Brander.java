@@ -17,6 +17,13 @@ public class Brander {
 //	@OneToMany(mappedBy = "brander")
 //	private List<Zakkie> koffies;
 	
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	
 	public String getBranderNaam() {
 		return branderNaam;
 	}
