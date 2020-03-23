@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+
 
 
 
@@ -15,32 +15,32 @@ public class Zakkie {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	
-	private String brander;
-	//private String naam;
-	private String producent;
-	//private String regio;
 	private String land;
+	private String producent;
+	private String proces;
+	//private String naam;
+	//private String regio;
 	//private String type;
 	//private String varieteiten;
 	//private String hoogte;
-	private String proces;
 	//private int oogstjaar;
 	//private String notes;
-	private int score;
 	//private String review;
 	//private double prijs;
 	//private String via;
+	
+	private Brander brander;
+	
 	public long getId() {
 		return id;
 	}
 	public void setId(long id) {
 		this.id = id;
 	}
-	public String getBrander() {
+	public Brander getBrander() {
 		return brander;
 	}
-	public void setBrander(String brander) {
+	public void setBrander(Brander brander) {
 		this.brander = brander;
 	}
 	public String getProducent() {
@@ -61,17 +61,4 @@ public class Zakkie {
 	public void setProces(String proces) {
 		this.proces = proces;
 	}
-	public int getScore() {
-		return score;
-	}
-	public void setScore(int score) {
-		this.score = score;
-	}
-	
-//	@ManyToOne
-//	private Brander brander;
-
-	
-
-
 }

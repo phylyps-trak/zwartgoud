@@ -8,5 +8,6 @@ public class KoffieApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(KoffieApplication.class, args);
+		System.out.println("Its ALIIIIVEEEE!!!");
 	}
 }

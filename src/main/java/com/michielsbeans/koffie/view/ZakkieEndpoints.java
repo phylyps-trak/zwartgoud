@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.michielsbeans.koffie.controller.ZakkieService;
 import com.michielsbeans.koffie.dto.Zakkie;
@@ -16,6 +17,12 @@ public class ZakkieEndpoints {
 		
 		@Autowired
 		ZakkieService s;
+		
+		@GetMapping(value = "/foos")
+		@ResponseBody
+		public String getFoosBySimplePath() {
+		    return "Get some Foos";
+		}
 		
 		@PostMapping("/zakkies")
 		public String opslaan(@RequestBody Zakkie zakkie) {
