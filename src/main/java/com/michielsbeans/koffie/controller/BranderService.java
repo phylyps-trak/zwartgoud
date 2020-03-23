@@ -15,9 +15,15 @@ public class BranderService {
 		@Autowired
 		BranderDao bd;
 		
-		public List<Brander>vindBranders (String stad) {
+		//METODE MET DERIVER QUERY
+		public List<Brander>vindBrandersDerivedQuery (String stad) {
 			List<Brander> dezeBranders = bd.findByBranderStadIgnoreCase(stad);
-			
+			return dezeBranders;
+		}
+		
+		//METHODE MET @QUERY
+		public List<Brander>vindBrandersAtQuery (String stad) {
+			List<Brander> dezeBranders = bd.findByStad(stad);
 			return dezeBranders;
 		}
 		

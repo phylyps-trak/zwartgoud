@@ -15,10 +15,16 @@ public class BranderEndpoints {
 	@Autowired
 	BranderService b;
 	
+	//ENDPOINT TEST VOOR DERIVED QUERY
+	@GetMapping("/branders1/{stad}")
+	public Iterable<Brander>vindBranders1(@PathVariable(value = "stad") String stad) {
+		return b.vindBrandersDerivedQuery(stad);	
+	}
 	
-	@GetMapping("/branders/{stad}")
-	public Iterable<Brander>vindBranders(@PathVariable(value = "stad") String stad) {
-		return b.vindBranders(stad);	
+	//ENDPOINT TEST VOOR @QUERY
+	@GetMapping("/branders2/{stad}")
+	public Iterable<Brander>vindBranders2(@PathVariable(value = "stad") String stad) {
+		return b.vindBrandersAtQuery(stad);	
 	}
 	
 	@PostMapping("/brander")
