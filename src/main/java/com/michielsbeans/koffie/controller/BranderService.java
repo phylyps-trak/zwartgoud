@@ -1,5 +1,7 @@
 package com.michielsbeans.koffie.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -12,6 +14,12 @@ public class BranderService {
 		
 		@Autowired
 		BranderDao bd;
+		
+		public List<Brander>vindBranders (String stad) {
+			List<Brander> dezeBranders = bd.findByBranderStadIgnoreCase(stad);
+			
+			return dezeBranders;
+		}
 		
 //save methode nieuw
 		public void saveBrander(Brander b) {
